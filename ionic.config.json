@@ -1,0 +1,8 @@
+{
+  "name": "OasisApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "pro_id": "c59b1a89"
+}
