@@ -13,6 +13,10 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { FirstPage } from '../pages/first/first';
+import { SecondPage } from '../pages/second/second';
+import { ThirdPage } from '../pages/third/third';
+import { FourPage } from '../pages/four/four';
 
 
 
@@ -28,6 +32,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilePage,
     LoginPage,
     SignupPage,
+    FirstPage,
+    SecondPage,
+    ThirdPage,
+    FourPage,
     TabsPage
   ],
   imports: [ 
@@ -45,6 +53,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilePage,
     LoginPage,
     SignupPage,
+    FirstPage,
+    SecondPage,
+    ThirdPage,
+    FourPage,
     TabsPage
   ],
   providers: [

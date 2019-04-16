@@ -11,5 +11,25 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-segment color="success" (ionChange)="segmentChanged($event)">
+        <ion-segment-button checked layout="icon-bottom">
+            <a class="tab-item" ui-sref="tabs.about.page1">Tabs</a>
+          
+          <ion-icon name="call"></ion-icon>
+          <ion-label>Call</ion-label>
+        </ion-segment-button>
+        <ion-segment-button layout="icon-bottom">
+          <ion-icon name="heart"></ion-icon>
+          <ion-label>Favorite</ion-label>
+        </ion-segment-button>
+        <ion-segment-button layout="icon-bottom">
+          <ion-icon name="pin"></ion-icon>
+          <ion-label>Map</ion-label>
+        </ion-segment-button>
+      </ion-segment>
 
+      <ion-list-header>Scrollable</ion-list-header>
+
+      
+      
 </ion-content>

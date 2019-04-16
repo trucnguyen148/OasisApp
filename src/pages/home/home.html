@@ -15,18 +15,6 @@
       <img src="../assets/imgs/logo.png" alt="">
     </ion-scroll>
 
-    <mbsc-form-group>
-      <mbsc-form-group-title>Fixed width</mbsc-form-group-title>
-      <mbsc-scrollview [options]="fixedSettings" class="md-fixed">
-          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
-          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
-          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
-          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
-          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
-          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
-      </mbsc-scrollview>
-  </mbsc-form-group>
-
     <!--SERVICE PRICE LISTS-->
     <ion-title>PRICE LISTS</ion-title>
     <mbsc-form [options]="formSettings">
@@ -35,14 +23,20 @@
       <mbsc-form-group collapsible close #nails style="background-color: none;">
         <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
           <mbsc-form-group-content>
-              <ion-row>
-                  <ion-col>
-                    <p><Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                  </ion-col>
-                  <ion-col>
-                    <p>Content</p>
-                  </ion-col>
-              </ion-row>
+            <div class="mbsc-grid">
+              <div class="mbsc-row">
+                  <div class="mbsc-col-8">col 8</div>
+                  <div class="mbsc-col-4">col 4</div>
+              </div>  
+              <div class="mbsc-row">
+                <div class="mbsc-col-8">col 8</div>
+                <div class="mbsc-col-4">col 4</div>
+            </div>  
+            <div class="mbsc-row">
+              <div class="mbsc-col-8">col 8</div>
+              <div class="mbsc-col-4">col 4</div>
+          </div>  
+            </div>
           </mbsc-form-group-content>  
       </mbsc-form-group>   
         
@@ -50,14 +44,12 @@
       <mbsc-form-group collapsible close #eyelasher style="background-color: none;">
         <mbsc-form-group-title><img src="../assets/icon/eyelasher.png" alt=""></mbsc-form-group-title>
           <mbsc-form-group-content>
-              <ion-row>
-                  <ion-col>
-                    <p>Name</p>
-                  </ion-col>
-                  <ion-col>
-                    <p>Content</p>
-                  </ion-col>
-              </ion-row>
+            <div class="mbsc-grid">
+              <div class="mbsc-row">
+                  <div class="mbsc-col-8">col 8</div>
+                  <div class="mbsc-col-4">col 4</div>
+              </div>      
+            </div>
           </mbsc-form-group-content>  
       </mbsc-form-group>   
         
@@ -65,14 +57,12 @@
       <mbsc-form-group collapsible close #tattoo style="background-color: none;">
         <mbsc-form-group-title><img src="../assets/icon/tattoo.png" alt=""></mbsc-form-group-title>
           <mbsc-form-group-content>
-              <ion-row>
-                  <ion-col>
-                    <p>Name</p>
-                  </ion-col>
-                  <ion-col>
-                    <p>Content</p>
-                  </ion-col>
-              </ion-row>
+            <div class="mbsc-grid">
+              <div class="mbsc-row">
+                  <div class="mbsc-col-8">col 8</div>
+                  <div class="mbsc-col-4">col 4</div>
+              </div>      
+            </div>
           </mbsc-form-group-content>  
       </mbsc-form-group>   
         
@@ -80,14 +70,12 @@
       <mbsc-form-group collapsible close #course style="background-color: none;">
         <mbsc-form-group-title><img src="../assets/icon/course.png" alt=""></mbsc-form-group-title>
           <mbsc-form-group-content>
-              <ion-row>
-                  <ion-col>
-                    <p>Name</p>
-                  </ion-col>
-                  <ion-col>
-                    <p>Content</p>
-                  </ion-col>
-              </ion-row>
+            <div class="mbsc-grid">
+              <div class="mbsc-row">
+                  <div class="mbsc-col-8">col 8</div>
+                  <div class="mbsc-col-4">col 4</div>
+              </div>      
+            </div>
           </mbsc-form-group-content>  
       </mbsc-form-group>            
     </mbsc-form>
