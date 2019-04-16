@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild  } from '@angular/core';
+import {  MbscFormOptions } from '@mobiscroll/angular';
+
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,12 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  @ViewChild('contactDetails')
+    cd: any;
 
+    formSettings: MbscFormOptions = {
+      lang: 'fi',
+      theme: 'ios'
   }
 
 }

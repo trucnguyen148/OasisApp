@@ -1,17 +1,40 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title style="text-align: right;">Nguyen Thi Thanh Truc</ion-title>
+    <!-- icon is missing -->
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <!--HOT DEALS-->
+  <ion-title>HOT DEALS </ion-title>
+    <ion-scroll scrollX="true" style="white-space: nowrap; weight: 50%; height: 100%;">
+      <img src="../assets/imgs/logo.png" alt="">
+      <img src="../assets/imgs/logo.png" alt="">
+      <img src="../assets/imgs/logo.png" alt="">
+      <img src="../assets/imgs/logo.png" alt="">
+    </ion-scroll>
+
+    <!--SERVICE PRICE LISTS-->
+    <ion-title>PRICE LISTS</ion-title>
+    <mbsc-form [options]="formSettings">
+    
+        <mbsc-form-group collapsible close #contactDetails>
+            <mbsc-form-group-title>Contact details</mbsc-form-group-title>
+            <mbsc-form-group-content>
+                <ion-row>
+                   <ion-col>
+                     <p>Name</p>
+                   </ion-col>
+                   <ion-col>
+                     <p>Content</p>
+                   </ion-col>
+                </ion-row>
+            </mbsc-form-group-content>
+        </mbsc-form-group>
+    
+        
+    
+    </mbsc-form>
+
 </ion-content>
