@@ -5,84 +5,90 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="background-color">
+<ion-content padding >
   <!--HOT DEALS-->
   <ion-title>HOT DEALS </ion-title>
-    <ion-scroll scrollX="true" style="white-space: nowrap; weight: 50%; height: 100%;">
+    <ion-scroll scrollX="true" style="white-space: nowrap; width: 100%; height: 100%;">
       <img src="../assets/imgs/logo.png" alt="">
       <img src="../assets/imgs/logo.png" alt="">
       <img src="../assets/imgs/logo.png" alt="">
       <img src="../assets/imgs/logo.png" alt="">
     </ion-scroll>
 
+    <mbsc-form-group>
+      <mbsc-form-group-title>Fixed width</mbsc-form-group-title>
+      <mbsc-scrollview [options]="fixedSettings" class="md-fixed">
+          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
+          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
+          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
+          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
+          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
+          <mbsc-scrollview-item ><img src="../assets/imgs/logo.png" alt=""></mbsc-scrollview-item>
+      </mbsc-scrollview>
+  </mbsc-form-group>
+
     <!--SERVICE PRICE LISTS-->
     <ion-title>PRICE LISTS</ion-title>
     <mbsc-form [options]="formSettings">
-      <ion-row>
-        <!--NAILS-->
-        <ion-col>
-          <mbsc-form-group collapsible close #contactDetails style="background-color: none;">
-            <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
-              <mbsc-form-group-content>
-                  <ion-row>
-                      <ion-col>
-                        <p>Name</p>
-                      </ion-col>
-                      <ion-col>
-                        <p>Content</p>
-                      </ion-col>
-                  </ion-row>
-              </mbsc-form-group-content>  
-          </mbsc-form-group>   
-        </ion-col>  
-        <!--EYELASHER EXTEND-->
-        <ion-col>
-          <mbsc-form-group collapsible close #contactDetails style="background-color: none;">
-            <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
-              <mbsc-form-group-content>
-                  <ion-row>
-                      <ion-col>
-                        <p>Name</p>
-                      </ion-col>
-                      <ion-col>
-                        <p>Content</p>
-                      </ion-col>
-                  </ion-row>
-              </mbsc-form-group-content>  
-          </mbsc-form-group>   
-        </ion-col>
+      
+        <!--NAILS-->   
+      <mbsc-form-group collapsible close #nails style="background-color: none;">
+        <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
+          <mbsc-form-group-content>
+              <ion-row>
+                  <ion-col>
+                    <p><Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                  </ion-col>
+                  <ion-col>
+                    <p>Content</p>
+                  </ion-col>
+              </ion-row>
+          </mbsc-form-group-content>  
+      </mbsc-form-group>   
+        
+        <!--EYELASHER EXTEND-->  
+      <mbsc-form-group collapsible close #eyelasher style="background-color: none;">
+        <mbsc-form-group-title><img src="../assets/icon/eyelasher.png" alt=""></mbsc-form-group-title>
+          <mbsc-form-group-content>
+              <ion-row>
+                  <ion-col>
+                    <p>Name</p>
+                  </ion-col>
+                  <ion-col>
+                    <p>Content</p>
+                  </ion-col>
+              </ion-row>
+          </mbsc-form-group-content>  
+      </mbsc-form-group>   
+        
         <!--EYEBROWN TATTOO-->
-        <ion-col>
-          <mbsc-form-group collapsible close #contactDetails style="background-color: none;">
-            <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
-              <mbsc-form-group-content>
-                  <ion-row>
-                      <ion-col>
-                        <p>Name</p>
-                      </ion-col>
-                      <ion-col>
-                        <p>Content</p>
-                      </ion-col>
-                  </ion-row>
-              </mbsc-form-group-content>  
-          </mbsc-form-group>   
-        </ion-col>
+      <mbsc-form-group collapsible close #tattoo style="background-color: none;">
+        <mbsc-form-group-title><img src="../assets/icon/tattoo.png" alt=""></mbsc-form-group-title>
+          <mbsc-form-group-content>
+              <ion-row>
+                  <ion-col>
+                    <p>Name</p>
+                  </ion-col>
+                  <ion-col>
+                    <p>Content</p>
+                  </ion-col>
+              </ion-row>
+          </mbsc-form-group-content>  
+      </mbsc-form-group>   
+        
         <!--COURSES-->
-        <ion-col>
-          <mbsc-form-group collapsible close #contactDetails style="background-color: none;">
-            <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
-              <mbsc-form-group-content>
-                  <ion-row>
-                      <ion-col>
-                        <p>Name</p>
-                      </ion-col>
-                      <ion-col>
-                        <p>Content</p>
-                      </ion-col>
-                  </ion-row>
-              </mbsc-form-group-content>  
-          </mbsc-form-group>   
-        </ion-col>  
-      </ion-row>               
+      <mbsc-form-group collapsible close #course style="background-color: none;">
+        <mbsc-form-group-title><img src="../assets/icon/course.png" alt=""></mbsc-form-group-title>
+          <mbsc-form-group-content>
+              <ion-row>
+                  <ion-col>
+                    <p>Name</p>
+                  </ion-col>
+                  <ion-col>
+                    <p>Content</p>
+                  </ion-col>
+              </ion-row>
+          </mbsc-form-group-content>  
+      </mbsc-form-group>            
     </mbsc-form>
 </ion-content>

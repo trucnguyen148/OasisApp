@@ -1,4 +1,4 @@
-import { Component, ViewChild  } from '@angular/core';
+import { Component } from '@angular/core';
 import {  MbscFormOptions } from '@mobiscroll/angular';
 
 
@@ -7,13 +7,18 @@ import {  MbscFormOptions } from '@mobiscroll/angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  fixedSettings: any = {
+    theme: 'android',
+    layout: 'fixed',
+    itemWidth: 80
+}
 
-  @ViewChild('contactDetails')
-    cd: any;
 
+  
+    
     formSettings: MbscFormOptions = {
       lang: 'fi',
       theme: 'ios'
   }
-
+  
 }
