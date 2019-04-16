@@ -5,27 +5,27 @@
   Ionic pages and navigation.
 -->
 
-<ion-content>
+<ion-content class="backgroud-nd-color">
 
   <img class="logo"  logo src="../assets/imgs/logo.png">
 
   <ion-list style="margin: 0 5%;">
     <ion-item>
       <ion-icon name="md-person" item-left primary></ion-icon>
-      <ion-input type="text" placeholder="Số điện thoại" ></ion-input>
+      <ion-input type="text" placeholder="Phone number" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-icon name="md-lock" item-left primary></ion-icon>
-      <ion-input type="password" placeholder="Mật khẩu"></ion-input>
+      <ion-input type="password" placeholder="Password"></ion-input>
     </ion-item>
   </ion-list>
 
-  <p style="text-align: right; margin-right: 5%;">Quên mật khẩu?</p>
+  <p style="text-align: right; margin-right: 5%;">Forgot password?</p>
 
   <div >
-    <p><button ion-button round color="primary" (click)="goTabsPage()">ĐĂNG NHẬP</button></p>
-    <p class="or">Hoặc đăng nhập với</p>
+    <p><button ion-button round color="primary" (click)="goTabsPage()">LOGIN</button></p>
+    <p class="or">Or Login by</p>
     <ion-grid>
       <ion-row>
         <ion-col col-6>
@@ -39,8 +39,8 @@
 
   </div>
   <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
-      <p>Bạn chưa có tài khoản?</p>
-      <button ion-button clear (click)="goSignupPage()">Đăng kí</button>
+      <p>Don't you have account?</p>
+      <button ion-button clear (click)="goSignupPage()">Signup</button>
   </ion-grid>
 
 
