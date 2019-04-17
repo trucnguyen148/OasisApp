@@ -16,67 +16,30 @@
     </ion-scroll>
 
     <!--SERVICE PRICE LISTS-->
-    <ion-title>PRICE LISTS</ion-title>
-    <mbsc-form [options]="formSettings">
-      
-        <!--NAILS-->   
-      <mbsc-form-group collapsible close #nails style="background-color: none;">
-        <mbsc-form-group-title><img src="../assets/icon/nails.png" alt=""></mbsc-form-group-title>
-          <mbsc-form-group-content>
-            <div class="mbsc-grid">
-              <div class="mbsc-row">
-                  <div class="mbsc-col-8">col 8</div>
-                  <div class="mbsc-col-4">col 4</div>
-              </div>  
-              <div class="mbsc-row">
-                <div class="mbsc-col-8">col 8</div>
-                <div class="mbsc-col-4">col 4</div>
-            </div>  
-            <div class="mbsc-row">
-              <div class="mbsc-col-8">col 8</div>
-              <div class="mbsc-col-4">col 4</div>
-          </div>  
-            </div>
-          </mbsc-form-group-content>  
-      </mbsc-form-group>   
-        
-        <!--EYELASHER EXTEND-->  
-      <mbsc-form-group collapsible close #eyelasher style="background-color: none;">
-        <mbsc-form-group-title><img src="../assets/icon/eyelasher.png" alt=""></mbsc-form-group-title>
-          <mbsc-form-group-content>
-            <div class="mbsc-grid">
-              <div class="mbsc-row">
-                  <div class="mbsc-col-8">col 8</div>
-                  <div class="mbsc-col-4">col 4</div>
-              </div>      
-            </div>
-          </mbsc-form-group-content>  
-      </mbsc-form-group>   
-        
-        <!--EYEBROWN TATTOO-->
-      <mbsc-form-group collapsible close #tattoo style="background-color: none;">
-        <mbsc-form-group-title><img src="../assets/icon/tattoo.png" alt=""></mbsc-form-group-title>
-          <mbsc-form-group-content>
-            <div class="mbsc-grid">
-              <div class="mbsc-row">
-                  <div class="mbsc-col-8">col 8</div>
-                  <div class="mbsc-col-4">col 4</div>
-              </div>      
-            </div>
-          </mbsc-form-group-content>  
-      </mbsc-form-group>   
-        
-        <!--COURSES-->
-      <mbsc-form-group collapsible close #course style="background-color: none;">
-        <mbsc-form-group-title><img src="../assets/icon/course.png" alt=""></mbsc-form-group-title>
-          <mbsc-form-group-content>
-            <div class="mbsc-grid">
-              <div class="mbsc-row">
-                  <div class="mbsc-col-8">col 8</div>
-                  <div class="mbsc-col-4">col 4</div>
-              </div>      
-            </div>
-          </mbsc-form-group-content>  
-      </mbsc-form-group>            
-    </mbsc-form>
+  <ion-title>PRICE LISTS</ion-title>
+    <ion-card-content>
+      <ion-segment [(ngModel)]="safari" color="primary">
+        <ion-segment-button value="Nails" style="height:100%">
+          <img src="../assets/icon/nails.png" alt="">
+        </ion-segment-button>
+        <ion-segment-button value="Eyelasher" style="height:100%">
+          <img src="../assets/icon/eyelasher.png" alt="">
+        </ion-segment-button>
+        <ion-segment-button value="Tattoo" style="height:100%">
+          <img src="../assets/icon/tattoo.png" alt="">
+        </ion-segment-button>
+        <ion-segment-button value="Courses" style="height:100%">
+          <img src="../assets/icon/course.png" alt="">
+        </ion-segment-button>
+      </ion-segment>
+      <ion-list style="margin: 0" inset>
+        <button ion-item *ngFor="let sItem of getSafariItems(safari)">
+          <ion-icon item-end [name]="sItem.icon"></ion-icon>
+          <p style="text-align:left ">{{ sItem.name }}</p>
+        </button>
+      </ion-list>
+    </ion-card-content>
+  
+
+       
 </ion-content>

@@ -17,15 +17,53 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 
 export class ProductsPage {
-  segmentChanged(ev: any) {
+  /*segmentChanged(ev: any) {
     console.log('Segment changed', ev);
-  }
+  }*/
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+ 
+  safari = 'Shared Links';
+  
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProductsPage');
+
+
+  items: any = {
+    'Bookmarks': [
+      {
+        name: 'Favorites',
+        icon: 'ios-star-outline'
+      },
+      {
+        name: 'History',
+        icon: 'ios-clock-outline'
+      }
+    ],
+    'Reading List': [
+      {
+        name: 'Terms of Service',
+        icon: 'create'
+      },
+      {
+        name: 'User Guide',
+        icon: 'book'
+      }
+    ],
+    'Shared Links': [
+      {
+        name: 'Ionic Framework',
+        icon: 'ionic'
+      },
+      {
+        name: 'Learn Angular',
+        icon: 'logo-angular'
+      }
+    ]
+  };
+
+ 
+
+  getSafariItems(type: any) {
+    return this.items[type];
   }
 
 }
