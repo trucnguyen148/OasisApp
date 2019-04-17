@@ -3,6 +3,10 @@
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
+
+  https://codepen.io/ihuseynoff/pen/dXOaZP
+
+  https://github.com/ionic-team/ionic/tree/v3/demos/src/segment
 -->
 <ion-header>
   <ion-navbar>
@@ -10,26 +14,29 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-segment color="success" (ionChange)="segmentChanged($event)">
-        <ion-segment-button checked layout="icon-bottom">
-            <a class="tab-item" ui-sref="tabs.about.page1">Tabs</a>
-          
-          <ion-icon name="call"></ion-icon>
-          <ion-label>Call</ion-label>
+
+<ion-content class="outer-content">
+
+    <ion-card-content>
+      <ion-segment [(ngModel)]="safari" color="primary">
+        <ion-segment-button value="Bookmarks">
+          <ion-icon name="book"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button layout="icon-bottom">
-          <ion-icon name="heart"></ion-icon>
-          <ion-label>Favorite</ion-label>
+        <ion-segment-button value="Reading List">
+          <ion-icon ios="ios-glasses-outline" md="md-glasses"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button layout="icon-bottom">
-          <ion-icon name="pin"></ion-icon>
-          <ion-label>Map</ion-label>
+        <ion-segment-button value="Shared Links">
+          <ion-icon ios="ios-at-outline" md="md-at"></ion-icon>
         </ion-segment-button>
       </ion-segment>
+      <ion-list style="margin: 0" inset>
+        <button ion-item *ngFor="let sItem of getSafariItems(safari)">
+          <ion-icon item-end [name]="sItem.icon"></ion-icon>
+          <p style="text-align:left ">{{ sItem.name }}</p>
+        </button>
+      </ion-list>
+    </ion-card-content>
 
-      <ion-list-header>Scrollable</ion-list-header>
-
-      
-      
 </ion-content>
+      
+
