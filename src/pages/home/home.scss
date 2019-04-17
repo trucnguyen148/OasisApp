@@ -1,6 +1,36 @@
 page-home {
-   
-    ion-segment-button{
-        height: 100%;
+    .header{
+        margin-bottom: 2em;
     }
+    .pins {
+        column-count: 2;
+    }
+
+    .pin {
+        display: inline-block;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+
+    // Media queries
+    @media (min-width: 480px) {
+        .pins {
+            column-count: 3;
+        }
+        .item ion-avatar img {
+            width:  7vw !important;
+            height: 7vw !important;
+        }
+    }
+
+    @media (min-width: 640px) {
+        .pins {
+            column-count: 4;
+        }
+       
+        
+    }
+   
 }

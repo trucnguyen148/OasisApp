@@ -7,18 +7,18 @@
 
 <ion-content padding >
   <!--HOT DEALS-->
-  <ion-title>HOT DEALS </ion-title>
-    <ion-scroll scrollX="true" style="white-space: nowrap; width: 100%; height: 100%;">
+  <ion-title class="header">HOT DEALS </ion-title>
+    <ion-scroll scrollX="true" style="white-space: nowrap; width: 100%; height: 80%;">
       <img src="../assets/imgs/logo.png" alt="">
       <img src="../assets/imgs/logo.png" alt="">
       <img src="../assets/imgs/logo.png" alt="">
       <img src="../assets/imgs/logo.png" alt="">
     </ion-scroll>
 
-    <!--SERVICE PRICE LISTS-->
-  <ion-title>PRICE LISTS</ion-title>
+  <!--SERVICE PRICE LISTS-->
+  <ion-title class="header">PRICE LISTS</ion-title>
     <ion-card-content>
-      <ion-segment [(ngModel)]="safari" color="primary">
+      <ion-segment [(ngModel)]="priceList" color="gmail">
         <ion-segment-button value="Nails" style="height:100%">
           <img src="../assets/icon/nails.png" alt="">
         </ion-segment-button>
@@ -32,14 +32,21 @@
           <img src="../assets/icon/course.png" alt="">
         </ion-segment-button>
       </ion-segment>
-      <ion-list style="margin: 0" inset>
-        <button ion-item *ngFor="let sItem of getSafariItems(safari)">
-          <ion-icon item-end [name]="sItem.icon"></ion-icon>
-          <p style="text-align:left ">{{ sItem.name }}</p>
-        </button>
+      <ion-list style="margin: 0" inset>     
+        <ion-item *ngFor="let sItem of getPriceListItems(priceList)">
+          <ion-title>{{sItem.title}}</ion-title>
+          {{ sItem.name }}
+          <p item-end>{{ sItem.price }}</p>
+        </ion-item>
       </ion-list>
     </ion-card-content>
   
-
+  <!--COLLECTIONS-->
+  <ion-title class="header">COLLECTIONS</ion-title>
+  <div class="pins">
+      <ion-card class="pin" *ngFor="let post of posts">
+        <img [src]="post.image" />
+      </ion-card>
+    </div>
        
 </ion-content>
