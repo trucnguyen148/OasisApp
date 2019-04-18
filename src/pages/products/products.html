@@ -19,23 +19,28 @@
 
     <ion-card-content>
       <ion-segment [(ngModel)]="safari" color="primary">
-        <ion-segment-button value="Bookmarks">
-          <ion-icon name="book"></ion-icon>
+        <ion-segment-button value="NailsPolish">
+          <img src="" alt="">
         </ion-segment-button>
-        <ion-segment-button value="Reading List">
-          <ion-icon ios="ios-glasses-outline" md="md-glasses"></ion-icon>
+        <ion-segment-button value="Liquid">
+          <img src="" alt="">
         </ion-segment-button>
-        <ion-segment-button value="Shared Links">
-          <ion-icon ios="ios-at-outline" md="md-at"></ion-icon>
+        <ion-segment-button value="Accessories">
+          <img src="" alt="">    
+        </ion-segment-button>
+        <ion-segment-button value="EquipmentBrushes">
+          <img src="" alt="">
         </ion-segment-button>
       </ion-segment>
       <ion-list style="margin: 0" inset>
-        <button ion-item *ngFor="let sItem of getSafariItems(safari)">
-          <ion-icon item-end [name]="sItem.icon"></ion-icon>
-          <p style="text-align:left ">{{ sItem.name }}</p>
+        <button ion-item *ngFor="let sItem of getSafariItems(safari)">         
+          <ion-title>{{sItem.title}}</ion-title>
+          <p item-start>{{ sItem.name }}</p>
+          <p>{{ sItem.price }}</p>
+          <button item-end onclick="Order()">Order</button>
         </button>
       </ion-list>
-
+      
       
     </ion-card-content>
 

@@ -28,17 +28,21 @@ export class ProductsPage {
 
 
   items: any = {
-    'Bookmarks': [
+    'NailsPolish': [
       {
         name: 'Favorites',
-        icon: 'ios-star-outline'
+        price: '20'
       },
       {
         name: 'History',
         icon: 'ios-clock-outline'
       }
     ],
-    'Reading List': [
+    'Liquid': [
+    /*WORKING LIQUID*/
+      {
+        title: 'Working liquids'
+      },
       {
         name: 'Terms of Service',
         icon: 'create'
@@ -46,9 +50,51 @@ export class ProductsPage {
       {
         name: 'User Guide',
         icon: 'book'
+      },
+    /*TREATMENT*/
+      {
+        title:'Traetments'
+      },
+      {
+        name: 'Favorites',
+        price: '20'
+      },
+      {
+        name: 'Favorites',
+        price: '20'
+      },
+      {
+        name: 'Favorites',
+        price: '20'
+      },
+    /*DISINFECTANTS*/
+    {
+      title:'Disinfectants'
+    },
+    {
+      name: 'Favorites',
+      price: '20'
+    },
+    {
+      name: 'Favorites',
+      price: '20'
+    },
+    {
+      name: 'Favorites',
+      price: '20'
+    },
+    ],
+    'Accessories': [
+      {
+        name: 'Ionic Framework',
+        icon: 'ionic'
+      },
+      {
+        name: 'Learn Angular',
+        icon: 'logo-angular'
       }
     ],
-    'Shared Links': [
+    'EquipmentBrushes': [
       {
         name: 'Ionic Framework',
         icon: 'ionic'
