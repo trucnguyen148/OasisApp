@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { ConfirmPage } from '../confirm/confirm';
 /**
- * Generated class for the FirstPage page.
+ * Generated class for the CartPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-first',
-  templateUrl: 'first.html',
+  selector: 'page-cart',
+  templateUrl: 'cart.html',
 })
-export class FirstPage {
+export class CartPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FirstPage');
+    console.log('ionViewDidLoad CartPage');
+  }
+  goToConfirmPage(){
+    this.navCtrl.push(ConfirmPage);
   }
 
 }

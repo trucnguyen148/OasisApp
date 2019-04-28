@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { PaymentPage } from '../payment/payment';
 /**
- * Generated class for the SecondPage page.
+ * Generated class for the ConfirmPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-second',
-  templateUrl: 'second.html',
+  selector: 'page-confirm',
+  templateUrl: 'confirm.html',
 })
-export class SecondPage {
+export class ConfirmPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SecondPage');
+    console.log('ionViewDidLoad ConfirmPage');
+  }
+
+  goToPaymentPage(){
+    this.navCtrl.push(PaymentPage);
   }
 
 }

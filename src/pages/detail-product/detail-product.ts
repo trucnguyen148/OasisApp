@@ -1,27 +1,19 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController } from 'ionic-angular';
-import { DetailProductPage } from '../detail-product/detail-product';
-import { CartPage } from '../cart/cart';
-
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { ViewState } from '@angular/core/src/view';
 /**
- * Generated class for the ProductsPage page.
+ * Generated class for the DetailProductPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
-@IonicPage(
-)
+@IonicPage()
 @Component({
-  selector: 'page-products',
-  templateUrl: 'products.html',
-
+  selector: 'page-detail-product',
+  templateUrl: 'detail-product.html',
 })
-
-export class ProductsPage {
-  /*segmentChanged(ev: any) {
-    console.log('Segment changed', ev);
-  }*/
+export class DetailProductPage {
   safari = 'Shared Links';
   items: any = {
     'NailsPolish': [
@@ -100,15 +92,15 @@ export class ProductsPage {
     return this.items[type];
   }
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController){
-
-  }
-  goToDetailPage(){
-    let myModal = this.modalCtrl.create(DetailProductPage);
-    myModal.present();
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtr: ViewController) {
   }
 
-  goToCartPage(){
-    this.navCtrl.push(CartPage);
+  ionViewDidLoad() {
+    console.log(this.navParams.get('name'));
   }
+
+  closeModal(){
+    this.viewCtr.dismiss();
+  }
+
 }

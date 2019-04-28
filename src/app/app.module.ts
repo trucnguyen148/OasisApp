@@ -1,9 +1,10 @@
 import { MbscModule } from '@mobiscroll/angular';
 import { FormsModule } from '@angular/forms';
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+
 
 
 import { HomePage } from '../pages/home/home';
@@ -13,10 +14,10 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
-import { FirstPage } from '../pages/first/first';
-import { SecondPage } from '../pages/second/second';
-import { ThirdPage } from '../pages/third/third';
-import { FourPage } from '../pages/four/four';
+import { DetailProductPage } from '../pages/detail-product/detail-product';
+import { CartPage } from '../pages/cart/cart';
+import { ConfirmPage } from '../pages/confirm/confirm';
+import { PaymentPage } from '../pages/payment/payment';
 
 
 
@@ -32,11 +33,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilePage,
     LoginPage,
     SignupPage,
-    FirstPage,
-    SecondPage,
-    ThirdPage,
-    FourPage,
-    TabsPage
+    CartPage,
+    ConfirmPage,
+    PaymentPage,
+    TabsPage,
+    DetailProductPage
   ],
   imports: [ 
     MbscModule, 
@@ -53,16 +54,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProfilePage,
     LoginPage,
     SignupPage,
-    FirstPage,
-    SecondPage,
-    ThirdPage,
-    FourPage,
+    DetailProductPage,
+    CartPage,
+    ConfirmPage,
+    PaymentPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
