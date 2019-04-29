@@ -6,10 +6,17 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Payment</ion-title>
+    <ion-title>Payment methods</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="button">
+  
+      <button (click)="goToMasterCardPage()" ion-button block> Pay by Master Card</button>       
+ 
+      <button (click)="goToVisaCardPage()" ion-button block> Pay by Visa Card</button>       
+  
+      <button (click)="goToPaypalPage()" ion-button block> Pay by Paypal</button>       
+  
 
 </ion-content>

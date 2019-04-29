@@ -18,11 +18,17 @@ import { DetailProductPage } from '../pages/detail-product/detail-product';
 import { CartPage } from '../pages/cart/cart';
 import { ConfirmPage } from '../pages/confirm/confirm';
 import { PaymentPage } from '../pages/payment/payment';
+import { MasterCardPage } from '../pages/master-card/master-card';
+import { VisaCardPage } from '../pages/visa-card/visa-card';
+import { PaypalPage } from '../pages/paypal/paypal';
+import { DetailHistoriesPage } from '../pages/detail-histories/detail-histories';
+import { BookingPage } from '../pages/booking/booking';
 
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
@@ -36,8 +42,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CartPage,
     ConfirmPage,
     PaymentPage,
-    TabsPage,
-    DetailProductPage
+    MasterCardPage,
+    VisaCardPage,
+    PaypalPage,
+    DetailHistoriesPage,
+    DetailProductPage,
+    BookingPage,
+    TabsPage
+    
   ],
   imports: [ 
     MbscModule, 
@@ -58,6 +70,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CartPage,
     ConfirmPage,
     PaymentPage,
+    MasterCardPage,
+    VisaCardPage,
+    PaypalPage,
+    DetailHistoriesPage,
+    BookingPage,
     TabsPage
   ],
   providers: [

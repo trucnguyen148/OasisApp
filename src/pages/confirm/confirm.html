@@ -6,25 +6,25 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Confirm</ion-title>
+    <ion-title>Order Confirm</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-list>
-        <ion-item style="padding-left: 0;">
-          <ion-label>Name</ion-label>
-          <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>
-        </ion-item>
-        <ion-item style="padding-left: 0;">
-            <ion-label>Address</ion-label>
-            <ion-input text-right type="text" ></ion-input>
-        </ion-item>
-        <ion-item style="padding-left: 0;">
-            <ion-label>Phone number</ion-label>
-            <ion-input text-right type="number" ></ion-input>
-        </ion-item>
-      </ion-list>
-      <button ion-button (click)="goToPaymentPage()">Payment</button>
+      <ion-item style="padding-left: 0;">
+        <ion-label>Name</ion-label>
+        <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>
+      </ion-item>
+      <ion-item style="padding-left: 0;">
+          <ion-label>Address</ion-label>
+          <ion-input text-right type="text" ></ion-input>
+      </ion-item>
+      <ion-item style="padding-left: 0;">
+          <ion-label>Phone number</ion-label>
+          <ion-input text-right type="number" ></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button (click)="goToPaymentPage()">Payment</button>
 
 </ion-content>

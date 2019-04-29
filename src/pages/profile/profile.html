@@ -11,5 +11,54 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-list>
+      <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+        <ion-avatar>
+          <img style="width: 50%" src="../assets/imgs/logo.png" alt="">
+        </ion-avatar>
+        <ion-item style="padding-left: 0;">
+            <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>
+          </ion-item>
+      </ion-grid>
+      <ion-item style="padding-left: 0;">
+          <ion-label>Address</ion-label>
+          <ion-input text-right type="text" ></ion-input>
+        </ion-item>
+  
+      <ion-item style="padding-left: 0;">
+        <ion-label>Phone number</ion-label>
+        <ion-input text-right type="number" ></ion-input>
+      </ion-item>
+  
+      <ion-item style="padding-left: 0;">
+        <ion-label>Email</ion-label>
+        <ion-input text-right type="email" ></ion-input>
+      </ion-item>
+
+      <ion-item style="padding-left: 0;">
+          <ion-label>Service Usage Histories:</ion-label>
+      </ion-item>
+
+      <ion-card>
+        <ion-list>
+            <button ion-button class="button-inner" (click)="goToDetailPage()">
+                <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                  <p style="padding-right: 2em;">8:30</p>
+                  <p>8/12/2019</p>
+                </ion-grid>
+                  <br>
+                <ion-grid style="display: flex; flex-direction: row;">
+                      <ion-title style="text-align: left">Bill number:</ion-title>
+                      <p style="text-align: right">...</p>
+                </ion-grid>
+                
+            </button>
+        </ion-list>
+      </ion-card>
+  
+      
+  
+  
+    </ion-list>
 
 </ion-content>
