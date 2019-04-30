@@ -14,25 +14,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'signup.html',
 })
 export class SignupPage {
-  userInfo: any = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-  register(){
-    (<any>window).AccountKitPlugin.loginWithPhoneNumber({
-      useAccessToken: true,
-      defaultCountryCode: "IN",
-      facebookNotificationsEnabled: true,
-    }, data => {
-      (<any>window).AccountKitPlugin.getAccount(
-        info => this.userInfo = info,
-        err => console.log(err)
-      );
-    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
+
+  
 
 }
