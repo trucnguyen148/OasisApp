@@ -22,12 +22,13 @@ import { MasterCardPage } from '../pages/master-card/master-card';
 import { VisaCardPage } from '../pages/visa-card/visa-card';
 import { PaypalPage } from '../pages/paypal/paypal';
 import { DetailHistoriesPage } from '../pages/detail-histories/detail-histories';
-import { BookingPage } from '../pages/booking/booking';
+import { BranchesPage } from '../pages/branches/branches';
 
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { BookingTimePage } from '../pages/booking-time/booking-time';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PaypalPage,
     DetailHistoriesPage,
     DetailProductPage,
-    BookingPage,
+    BranchesPage,
+    BookingTimePage,
     TabsPage
     
   ],
@@ -74,7 +76,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     VisaCardPage,
     PaypalPage,
     DetailHistoriesPage,
-    BookingPage,
+    BranchesPage,
+    BookingTimePage,
     TabsPage
   ],
   providers: [

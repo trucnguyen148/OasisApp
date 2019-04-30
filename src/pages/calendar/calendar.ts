@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BookingPage } from '../booking/booking';
+import { BranchesPage } from '../branches/branches';
 
 /**
  * Generated class for the CalendarPage page.
@@ -23,8 +23,8 @@ export class CalendarPage {
     console.log('ionViewDidLoad CalendarPage');
   }
 
-  goToBookingPage(){
-    this.navCtrl.push(BookingPage)
+  goToBranchesPage(){
+    this.navCtrl.push(BranchesPage)
   }
 
 }

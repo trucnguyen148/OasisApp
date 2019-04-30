@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the BookingPage page.
+ * Generated class for the BookingTimePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-booking',
-  templateUrl: 'booking.html',
+  selector: 'page-booking-time',
+  templateUrl: 'booking-time.html',
 })
-export class BookingPage {
+export class BookingTimePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BookingPage');
+    console.log('ionViewDidLoad BookingTimePage');
   }
 
 }
