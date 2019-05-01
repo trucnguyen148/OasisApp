@@ -117,8 +117,9 @@ priceList = 'Nails';
         price: '€25'
       },
 
-      
+
     ],
+    
     'Tattoo': [
       {
         name: '5',
@@ -168,7 +169,7 @@ priceList = 'Nails';
       {
         image: '../assets/collections/CoffeeOrTea.jpg'
       },
-      { 
+      {
         image: '../assets/collections/2.jpg'
       },
       {
