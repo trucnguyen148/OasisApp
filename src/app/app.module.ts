@@ -1,4 +1,3 @@
-import { MbscModule } from '@mobiscroll/angular';
 import { FormsModule } from '@angular/forms';
 import { NgModule, ErrorHandler,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -53,10 +52,9 @@ import { ValidatePage } from '../pages/validate/validate';
     BookingTimePage,
     ValidatePage,
     TabsPage
-    
+
   ],
-  imports: [ 
-    MbscModule, 
+  imports: [
     FormsModule, 
     BrowserModule,
     IonicModule.forRoot(MyApp)
