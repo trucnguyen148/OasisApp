@@ -14,8 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'booking-time.html',
 })
 export class BookingTimePage {
+  timeAlertOpts: any;
+  timeData: any;
+  times: Array<string>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.timeAlertOpts = {
+      title: 'Select your country code',
+    };
+    this.timeData = [
+      { time: '8:00 - 8:30', value: '' },
+      { time: '8:30 - 9:00', value: '' },
+      { time: '9:00 - 9:30', value: '' },
+      
+    ];
   }
 
   ionViewDidLoad() {

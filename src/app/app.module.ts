@@ -29,6 +29,7 @@ import { BranchesPage } from '../pages/branches/branches';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BookingTimePage } from '../pages/booking-time/booking-time';
+import { ValidatePage } from '../pages/validate/validate';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { BookingTimePage } from '../pages/booking-time/booking-time';
     DetailProductPage,
     BranchesPage,
     BookingTimePage,
+    ValidatePage,
     TabsPage
     
   ],
@@ -78,6 +80,7 @@ import { BookingTimePage } from '../pages/booking-time/booking-time';
     DetailHistoriesPage,
     BranchesPage,
     BookingTimePage,
+    ValidatePage,
     TabsPage
   ],
   providers: [

@@ -11,5 +11,22 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-item>
+      <ion-label>Choose time: </ion-label>
+      <ion-select [(ngModel)]="times" multiple="false" [selectOptions]="timeAlertOpts">
+        <ion-option *ngFor="let o of timeData" [value]="o.value">{{o.time}} </ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Choose stylist</ion-label>
+  </ion-item>
+    <ion-scroll scrollX="true" style="white-space: nowrap; width: 100%; height: 80%;">
+        <img src="../assets/imgs/logo.png" alt="">
+        <img src="../assets/imgs/logo.png" alt="">
+        <img src="../assets/imgs/logo.png" alt="">
+        <img src="../assets/imgs/logo.png" alt="">
+    </ion-scroll>
+  
+    
 
 </ion-content>

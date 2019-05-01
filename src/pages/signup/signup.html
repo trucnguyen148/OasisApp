@@ -7,6 +7,20 @@
 
 
 <ion-content padding>
-    <ion-input type=”text” placeholder=”254733000000” [(ngModel)]=”phone”></ion-input>
-      <button ion-button block color="primary" (click)="register()">Register</button>
+    <img class="logo"  logo src="../assets/imgs/logo.png">
+    <h1>REGISTER WITH OASIS</h1>
+    <ion-row>
+      <ion-col style="margin-right: -6em;">
+        <ion-select [(ngModel)]="countrycodes" multiple="false" [selectOptions]="countrycodeAlertOpts">
+          <ion-option *ngFor="let o of countrycodeData" [value]="o.value">{{o.code}} {{o.value}}   </ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col >
+        <input type="number" placeholder="">
+      </ion-col>
+    </ion-row>
+    <button ion-button (click)="goToValidatePage()">NEXT</button>
+    <p>By clicking "Next" you agree to our <a href="">Term of Use</a> and <a href="">Privacy Policy</a></p>
+
+    
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ValidatePage } from '../validate/validate';
 
 /**
  * Generated class for the SignupPage page.
@@ -15,13 +16,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
-
+  countrycodeAlertOpts: any;
+  countrycodeData: any;
+  countrycodes: Array<string>;
   
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.countrycodeAlertOpts = {
+      title: 'Select your country code',
+    };
+    this.countrycodeData = [
+      { code: 'VN', value: '+84' },
+      { code: 'FI', value: '+358' },
+      { code: 'US', value: '+001' },
+      
+    ];
+  }
+  goToValidatePage(){
+    this.navCtrl.push(ValidatePage);
+  }
 
 }
