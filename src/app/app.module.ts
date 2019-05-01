@@ -30,6 +30,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BookingTimePage } from '../pages/booking-time/booking-time';
 import { ValidatePage } from '../pages/validate/validate';
+import { HistoryBookingPage } from '../pages/history-booking/history-booking';
+import { OasisProvider } from '../providers/oasis/oasis';
+import { TestPage } from '../pages/test/test';
 
 
 @NgModule({
@@ -51,7 +54,9 @@ import { ValidatePage } from '../pages/validate/validate';
     DetailProductPage,
     BranchesPage,
     BookingTimePage,
+    HistoryBookingPage,
     ValidatePage,
+    TestPage,
     TabsPage
     
   ],
@@ -80,13 +85,16 @@ import { ValidatePage } from '../pages/validate/validate';
     DetailHistoriesPage,
     BranchesPage,
     BookingTimePage,
+    HistoryBookingPage,
     ValidatePage,
+    TestPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    OasisProvider
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

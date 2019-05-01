@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-grid *ngIf="products">
+      <ion-row>
+        <ion-col width-100>
+          <ion-list>
+            <ion-item>
+              <strong>Temperature: </strong> {{products.name}}
+            </ion-item>
+            <ion-item>
+              <strong>Wind Speed: </strong> {{products.unit_cost}}
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
