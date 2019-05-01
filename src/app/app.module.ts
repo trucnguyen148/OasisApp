@@ -31,7 +31,6 @@ import { BookingTimePage } from '../pages/booking-time/booking-time';
 import { ValidatePage } from '../pages/validate/validate';
 import { HistoryBookingPage } from '../pages/history-booking/history-booking';
 import { OasisProvider } from '../providers/oasis/oasis';
-import { TestPage } from '../pages/test/test';
 
 
 @NgModule({
@@ -55,7 +54,6 @@ import { TestPage } from '../pages/test/test';
     BookingTimePage,
     HistoryBookingPage,
     ValidatePage,
-    TestPage,
     TabsPage
 
   ],
@@ -85,7 +83,6 @@ import { TestPage } from '../pages/test/test';
     BookingTimePage,
     HistoryBookingPage,
     ValidatePage,
-    TestPage,
     TabsPage
   ],
   providers: [
