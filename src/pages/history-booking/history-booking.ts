@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the HistoryBookingPage page.
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HistoryBookingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
   schedules = [];
@@ -28,6 +28,9 @@ export class HistoryBookingPage {
         service: 'Eyebrown'
       }
     ]
+  }
+  closeModal(){
+    this.viewCtrl.dismiss();
   }
 
 }

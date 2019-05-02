@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { HistoryBookingPage } from '../history-booking/history-booking';
 
 /**
@@ -16,7 +16,7 @@ import { HistoryBookingPage } from '../history-booking/history-booking';
 })
 export class StylistPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
   employees = [];
   ionViewDidLoad() {
@@ -53,8 +53,11 @@ export class StylistPage {
       },
     ]
   }
+
+
   goToHistoryBookingPage(){
-    this.navCtrl.push(HistoryBookingPage);
+    let myModal = this.modalCtrl.create(HistoryBookingPage);
+    myModal.present();
   }
 
 }
