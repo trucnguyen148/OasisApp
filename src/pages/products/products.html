@@ -17,20 +17,20 @@
 
       <ion-segment [(ngModel)]="id" color="primary" >
         <!-- NailsPolish -->
-        <ion-segment-button (click)="getCategoryID(1)" value="1" style="height:50%">
-          <img src="../assets/icon/nailspolish.png" alt="">
+        <ion-segment-button  value="1" style="height:50%">
+          <img (click)="getCategoryID(1)" src="../assets/icon/nailspolish.png" alt="">
         </ion-segment-button>
 
-        <ion-segment-button (click)="getCategoryID(2)" value="2" style="height:70%">
-          <img src="../assets/icon/liquid.png" alt="">
+        <ion-segment-button value="2" style="height:70%">
+          <img (click)="getCategoryID(2)"  src="../assets/icon/liquid.png" alt="">
         </ion-segment-button>
 
-        <ion-segment-button (click)="getCategoryID(3)" value="3" style="height:70%">
-          <img src="../assets/icon/accessories.png" alt="">
+        <ion-segment-button  value="3" style="height:70%">
+          <img  (click)="getCategoryID(3)" src="../assets/icon/accessories.png" alt="">
         </ion-segment-button>
 
-        <ion-segment-button (click)="getCategoryID(4)" value="4" style="height:70%">
-          <img src="../assets/icon/brush.png" alt="">
+        <ion-segment-button  value="4" style="height:70%">
+          <img (click)="getCategoryID(4)" src="../assets/icon/brush.png" alt="">
         </ion-segment-button>
       </ion-segment>
 
