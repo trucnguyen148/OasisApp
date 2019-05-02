@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  
+
 priceList = 'Nails';
   items: any = {
     'Nails': [
@@ -164,7 +166,19 @@ priceList = 'Nails';
   }
 
   posts = [];
+  deals=[];
   ionViewDidLoad() {
+    this.deals = [
+      {
+        image: '../assets/imgs/Hotdeal1.png'
+      },
+      {
+        image: '../assets/imgs/Hotdeal1.png'
+      },
+      {
+        image: '../assets/imgs/Hotdeal1.png'
+      },
+    ]
     this.posts = [
       {
         image: '../assets/collections/CoffeeOrTea.jpg'
@@ -209,6 +223,7 @@ priceList = 'Nails';
         image: '../assets/collections/14.jpg'
       },
     ];
+
   }
 
 }
