@@ -4,18 +4,13 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header >
   <ion-navbar>
-    <ion-title>Service Usage Histories</ion-title>
-    <ion-buttons right>
-        <button ion-button icon-only (click)="closeModal()">
-            <ion-icon name="close"></ion-icon>
-        </button>
-    </ion-buttons>
+    <ion-title>SERVICE USAGE HISTORIES</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding *ngIf="booking">
+<ion-content style="margin-top: 3em" padding *ngIf="booking">
   <!--use ngFor here-->
     <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
         <p style="padding-right: 2em;">
@@ -37,22 +32,18 @@
           </ion-card>
       </div>
       <ion-item>
-        <ion-title>Used services</ion-title>
+        <ion-card-title>Used services:</ion-card-title>
         <ion-list>
-          <ion-item>
-            <!--list of used services here with ngFor {{}}-->
-          </ion-item>
+          <ion-card-content><!--{{booking.service}}--></ion-card-content>
         </ion-list>
       </ion-item>
 
 
       <ion-item *ngIf="emp_info">
-        <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
-          <ion-title>
+          <ion-card-title>
             Stylist:
-          </ion-title>
-          <p>{{ emp_info.name }}</p>
-        </ion-grid>
+          </ion-card-title>
+          <ion-card-content>{{ emp_info.name }}</ion-card-content>
       </ion-item>
 
 </ion-content>

@@ -1,69 +1,60 @@
-<!--
-  Generated template for the ProductsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
-
-  https://codepen.io/ihuseynoff/pen/dXOaZP
-
-  https://github.com/ionic-team/ionic/tree/v3/demos/src/segment
--->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Products</ion-title>
-    <ion-buttons (click)="goToCartPage()" right>
-        <button ion-button icon-only>
-            <ion-icon name="cart"></ion-icon>
-        </button>
-    </ion-buttons>
-  </ion-navbar>
+    <ion-navbar>
+      <ion-title>Products</ion-title>
+      <ion-buttons (click)="goToCartPage()" right>
+          <button ion-button icon-only>
+              <ion-icon name="cart"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
   
-</ion-header>
-
-
-<ion-content class="outer-content">
-
-    <ion-card-content>
-      <ion-segment [(ngModel)]="safari" color="primary" >
-        <ion-segment-button value="NailsPolish" style="height:50%">
-          <img src="../assets/icon/nailspolish.png" alt="">
-        </ion-segment-button>
-        <ion-segment-button value="Liquid" style="height:70%">
-          <img src="../assets/icon/liquid.png" alt="">
-        </ion-segment-button>
-        <ion-segment-button value="Accessories" style="height:70%">
-          <img src="../assets/icon/accessories.png" alt="">  
-        </ion-segment-button>
-        <ion-segment-button value="EquipmentBrushes" style="height:70%">
-          <img src="../assets/icon/brush.png" alt="">
-        </ion-segment-button>
-      </ion-segment>
-      <ion-list style="margin: 0" inset>
-        <button (click)="goToDetailPage()" ion-item *ngFor="let sItem of getSafariItems(safari)" >         
-          <ion-row>
-            <ion-col col-8 text-wrap >
-                <p item-left>{{ sItem.name }}</p>
-            </ion-col>
-            <ion-col col-2 text-wrap>
-                <p item-right>{{ sItem.price }}</p>
-            </ion-col>
-            <ion-col col-2 text-wrap>
-                 <button ion-button (click)="addToCart(item)"  icon-left small>
-                    <ion-icon name="add-circle"></ion-icon>     
-                </button> 
-            </ion-col>
-          </ion-row>
-          
-          
-          
-        </button>
-        
-      </ion-list>
-      
-     
-      
-    </ion-card-content>
-
-</ion-content>
-      
-
+  </ion-header>
+  
+  
+  <ion-content class="outer-content">
+  
+      <ion-card-content>
+  
+        <ion-segment [(ngModel)]="id" color="oasis">
+          <!-- NailsPolish -->
+          <ion-segment-button   value="1" style="height:50%" >
+            <img (click)="getCategoryID(1)" src="../assets/icon/nailspolish.png" alt="">
+          </ion-segment-button>
+  
+          <ion-segment-button  value="2" style="height:70%">
+            <img (click)="getCategoryID(2)" src="../assets/icon/liquid.png" alt="">
+          </ion-segment-button>
+  
+          <ion-segment-button  value="3" style="height:70%">
+            <img (click)="getCategoryID(3)" src="../assets/icon/accessories.png" alt="">
+          </ion-segment-button>
+  
+          <ion-segment-button  value="4" style="height:70%">
+            <img (click)="getCategoryID(4)" src="../assets/icon/brush.png" alt="">
+          </ion-segment-button>
+        </ion-segment>
+  
+        <ion-list style="margin: 0" inset>
+          <button ion-item *ngFor="let product of products" (click)="addToCart(product.id)">
+            <ion-row>
+              <ion-col col-8 text-wrap >
+                  <p item-left>{{ product.name }}</p>
+              </ion-col>
+              <ion-col col-2 text-wrap>
+                  <p item-right>{{ product.unit_price }}</p>
+              </ion-col>
+              <ion-col col-2 text-wrap >
+                   <button ion-button   icon-left small>
+                      <ion-icon name="add-circle"></ion-icon>
+                  </button>
+              </ion-col>
+            </ion-row>
+          </button>
+  
+        </ion-list>
+  
+  
+  
+      </ion-card-content>
+  
+  </ion-content>

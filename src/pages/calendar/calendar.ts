@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Modal } from 'ionic-angular';
 import { BranchesPage } from '../branches/branches';
+import { HistoryBookingPage } from '../history-booking/history-booking';
 
 /**
  * Generated class for the CalendarPage page.
@@ -16,7 +17,7 @@ import { BranchesPage } from '../branches/branches';
 })
 export class CalendarPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -25,6 +26,11 @@ export class CalendarPage {
 
   goToBranchesPage(){
     this.navCtrl.push(BranchesPage)
+  }
+
+  goToHistoryBookingPage(){
+    let myModal = this.modalCtrl.create(HistoryBookingPage);
+    myModal.present();
   }
 
 }

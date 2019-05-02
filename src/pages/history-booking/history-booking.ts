@@ -32,5 +32,4 @@ export class HistoryBookingPage {
   closeModal(){
     this.viewCtrl.dismiss();
   }
-
 }

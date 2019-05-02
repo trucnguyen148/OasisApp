@@ -25,13 +25,15 @@ import { BranchesPage } from '../pages/branches/branches';
 import { BookingTimePage } from '../pages/booking-time/booking-time';
 import { ValidatePage } from '../pages/validate/validate';
 import { HistoryBookingPage } from '../pages/history-booking/history-booking';
-import { OasisProvider } from '../providers/oasis/oasis';
 import { StylistPage } from '../pages/stylist/stylist';
 
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CartProvider } from '../providers/cart/cart';
+import { OasisProvider } from '../providers/oasis/oasis';
+
 
 
 @NgModule({
@@ -93,7 +95,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    OasisProvider
+    OasisProvider,
+    CartProvider
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

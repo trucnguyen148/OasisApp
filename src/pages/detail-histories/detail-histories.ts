@@ -33,10 +33,6 @@ export class DetailHistoriesPage {
   }
 
 
-  closeModal(){
-    this.viewCtrl.dismiss();
-  }
-
   posts = [];
   ionViewDidLoad() {
     this.posts = [
