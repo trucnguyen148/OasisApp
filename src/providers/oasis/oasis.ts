@@ -13,9 +13,7 @@ import { Injectable } from '@angular/core';
 export class OasisProvider {
   url;
   constructor(public http: Http) {
-    console.log('Hello WeatherProvider Provider');
     this.url = 'http://oasisvn.tk/api/';
-
   }
 
   getList(listname){

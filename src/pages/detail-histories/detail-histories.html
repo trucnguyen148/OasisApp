@@ -38,9 +38,9 @@
       </div>
       <ion-item>
         <ion-title>Used services</ion-title>
-        <ion-list>
-          <ion-item>
-            <!--list of used services here with ngFor {{}}-->
+        <ion-list *ngIf="product">
+          <ion-item >
+            <p>{{ product.name }} - {{ product.unit_price }} VND</p>
           </ion-item>
         </ion-list>
       </ion-item>

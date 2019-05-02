@@ -19,7 +19,7 @@ export class DetailHistoriesPage {
   booking_id:any;
   emp_id:any;
   emp_info:any;
-
+  product:any;
 
   constructor(
     public navCtrl: NavController,
@@ -54,34 +54,24 @@ export class DetailHistoriesPage {
       },
     ];
   }
-  //
-  // f1() {
-  //   this.oasisProvider.getListID("booking", this.booking_id).subscribe(booking => {
-  //     this.booking = JSON.parse(booking['_body']);
-  //     this.emp_id = this.booking['emp_id'];
-  //     console.log('my new booking: ',  JSON.parse(booking['_body']) );
-  //     console.log('my emp id: ',  this.emp_id );
-  //   });
-  // }
-  //
-  // f2(){
-  //   console.log('my new emp id: ',  this.emp_id );
-  // }
 
   ionViewWillEnter(){
       this.oasisProvider.getListID("booking", this.booking_id).subscribe(booking => {
         this.booking = JSON.parse(booking['_body']);
         this.emp_id = this.booking['emp_id'];
-        console.log('my new booking: ',  JSON.parse(booking['_body']) );
-        console.log('my emp id: ',  this.emp_id );
+        // console.log('my new booking: ',  JSON.parse(booking['_body']) );
+        // console.log('my emp id: ',  this.emp_id );
 
         this.oasisProvider.getListID("employee", this.emp_id).subscribe(emp_info => {
           this.emp_info = JSON.parse(emp_info['_body']);
-          console.log('my new emp_info: ',  JSON.parse(emp_info['_body']) )
+           //console.log('my new emp_info: ',  JSON.parse(emp_info['_body']) )
         });
       });
 
-
+      this.oasisProvider.getListID("product/booking", this.booking_id).subscribe(product => {
+        this.product = JSON.parse(product['_body']);
+         //console.log('my new product: ',  JSON.parse(product['_body']) )
+      });
 
   };
 }

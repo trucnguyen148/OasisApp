@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ConfirmPage } from '../confirm/confirm';
-/**
- * Generated class for the CartPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { OasisProvider } from '../../providers/oasis/oasis';
+import { CartProvider } from '../../providers/cart/cart';
+
 
 @IonicPage()
 @Component({
@@ -14,15 +11,24 @@ import { ConfirmPage } from '../confirm/confirm';
   templateUrl: 'cart.html',
 })
 export class CartPage {
+  products = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private oasisProvider:OasisProvider,
+    public cartProvider:CartProvider
+  ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CartPage');
+    this.products.push(this.cartProvider.addedItems);
+    console.log(this.products[0]);
   }
   goToConfirmPage(){
     this.navCtrl.push(ConfirmPage);
   }
+
+
 
 }

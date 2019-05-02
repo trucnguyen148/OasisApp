@@ -10,8 +10,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card >
+<ion-content padding >
+  <ion-card *ngFor="let product of products[0]">
       <ion-row>
           <ion-col col-2 text-wrap>
               <!--image-->
@@ -20,23 +20,21 @@
           <ion-col col-5 text-wrap>
             <ion-label>
               <!--name-->
-            </ion-label>    
+            </ion-label>
           </ion-col>
           <ion-col col-3 text-wrap>
             <ion-label>
-              <!--increment decrement quantity-->number
+              {{ product.name }}
             </ion-label>
           </ion-col>
           <ion-col col-2 >
               <!--total pice-->
               <ion-label>
-                  20e
+                  {{ product.unit_price }}
               </ion-label>
-              
+
           </ion-col>
       </ion-row>
   </ion-card>
   <button ion-button (click)="goToConfirmPage()">Confirm</button>
-  
-
 </ion-content>

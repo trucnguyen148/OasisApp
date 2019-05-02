@@ -31,6 +31,7 @@ import { BookingTimePage } from '../pages/booking-time/booking-time';
 import { ValidatePage } from '../pages/validate/validate';
 import { HistoryBookingPage } from '../pages/history-booking/history-booking';
 import { OasisProvider } from '../providers/oasis/oasis';
+import { CartProvider } from '../providers/cart/cart';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { OasisProvider } from '../providers/oasis/oasis';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    OasisProvider
+    OasisProvider,
+    CartProvider
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
