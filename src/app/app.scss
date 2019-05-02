@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.logo{
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.background-color{
+    background: #ffd8ed;
+}
+

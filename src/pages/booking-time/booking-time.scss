@@ -1,0 +1,27 @@
+page-booking-time {
+    ion-scroll[scrollX] {
+        white-space: nowrap;
+        height: 100%;
+        
+        overflow: hidden;
+    
+        .scroll-item {
+          display: inline-block;
+        }
+    
+        
+    
+        ion-avatar img{
+          margin: 10px;
+        }
+      }
+    
+      ion-scroll[scroll-avatar]{
+        height: 100%;
+      }
+    
+      /* Hide ion-content scrollbar */
+      ::-webkit-scrollbar{
+        display:none;
+      }
+}
