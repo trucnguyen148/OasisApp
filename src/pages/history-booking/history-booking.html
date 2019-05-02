@@ -6,10 +6,38 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>historyBooking</ion-title>
+    <ion-title>YOUR APPOINTMENTS</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+    <ion-grid>
+        <ion-card *ngFor="let schedule of schedules">
+          <ion-row>
+            <ion-card-title>Service:</ion-card-title>
+            <ion-card-content>{{schedule.service}}</ion-card-content>
+          </ion-row>
+          <ion-row>
+            <ion-card-title>Branch:</ion-card-title>
+            <ion-card-content>{{schedule.branch}}</ion-card-content>
+          </ion-row>
+          <ion-row>
+            <ion-card-title>Date:</ion-card-title>
+            <ion-card-content>{{schedule.date}}</ion-card-content>
+          </ion-row>
+          <ion-row>
+            <ion-card-title>Time:</ion-card-title>
+            <ion-card-content>{{schedule.time}}</ion-card-content>
+          </ion-row>
+          <ion-row>
+            <ion-card-title>Stylist:</ion-card-title>
+            <ion-card-content>{{schedule.stylist}}</ion-card-content>
+          </ion-row>
+          <ion-row>
+            <button ion-button>Cancel</button>
+            <button ion-button>Change</button>
+          </ion-row>
+          
+        </ion-card> 
+      </ion-grid>
 </ion-content>

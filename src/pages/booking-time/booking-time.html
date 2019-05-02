@@ -12,7 +12,10 @@
   </ion-header>
 <ion-content padding>
 <!--Choose day (put calendar here)-->
-
+<ion-item>
+    <ion-label>Choose date:</ion-label>
+    <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2019" max="2020" [(ngModel)]="time"></ion-datetime>
+  </ion-item>
 <!--Choose time-->
   <ion-item>
     <ion-label>Choose time:</ion-label>
@@ -23,18 +26,11 @@
 
       
 <!--Still missing name of employee-->
-  <ion-item>
-    <ion-label>Choose stylist</ion-label>
-  </ion-item>
   
-  <ion-scroll scrollX="true" scroll-avatar>
-      <ion-avatar>
-        <img style="width: 50%;" [src]="employee.img" *ngFor="let employee of employees" class="scroll-item"/>
-      </ion-avatar>
-  </ion-scroll>
-  <div>
-      <button ion-button (click)="goToHistoryBookingPage()">BOOK</button>
-
+  
+  
+  <div class="wrapper">
+      <button class="button" text-center  style="display: inline-block" ion-button class="button-center" (click)="goToStylistPage()">CHOOSE STYLIST</button>
   </div>
   
   <!--Booking button-->

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HistoryBookingPage } from '../history-booking/history-booking';
+import { StylistPage } from '../stylist/stylist';
+
 
 /**
  * Generated class for the BookingTimePage page.
@@ -17,6 +18,8 @@ import { HistoryBookingPage } from '../history-booking/history-booking';
 export class BookingTimePage {
   timeData: any;
   times: any;
+  time: any;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.timeData = [
@@ -29,40 +32,24 @@ export class BookingTimePage {
   // Pre-selected object with different object reference      
   this.times = { time: '8:00 - 8:30', value: '' };
 
-    
+  //Pick Date
+
+  this.time=  new Date().toISOString()
   }
 
   compareFn(option1: any, option2: any) {
     return option1.value === option2.value;
 }
 
-  employees = [];
-  ionViewDidLoad() {
-    this.employees = [
-      {
-        img: '../assets/employees/per1.png',
-        name: 'Quang Trung',
-        rating: '3'
-      },
-      {
-        img: '../assets/flags/vietnam.png',
-        name: 'Quang Trung',
-        rating: '3'
-      },
-      {
-        img: '../assets/flags/finland.png',
-        name: 'Quang Trung',
-        rating: '3'
-      }
-    ]
-  }
-
+  
   /* 
   BOOKING BUTTON
   */
- goToHistoryBookingPage(){
-   this.navCtrl.push(HistoryBookingPage);
+ goToStylistPage(){
+   this.navCtrl.push(StylistPage);
  }
-  
+ 
+ 
+
 
 }

@@ -22,15 +22,16 @@ import { VisaCardPage } from '../pages/visa-card/visa-card';
 import { PaypalPage } from '../pages/paypal/paypal';
 import { DetailHistoriesPage } from '../pages/detail-histories/detail-histories';
 import { BranchesPage } from '../pages/branches/branches';
+import { BookingTimePage } from '../pages/booking-time/booking-time';
+import { ValidatePage } from '../pages/validate/validate';
+import { HistoryBookingPage } from '../pages/history-booking/history-booking';
+import { OasisProvider } from '../providers/oasis/oasis';
+import { StylistPage } from '../pages/stylist/stylist';
 
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { BookingTimePage } from '../pages/booking-time/booking-time';
-import { ValidatePage } from '../pages/validate/validate';
-import { HistoryBookingPage } from '../pages/history-booking/history-booking';
-import { OasisProvider } from '../providers/oasis/oasis';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { OasisProvider } from '../providers/oasis/oasis';
     BranchesPage,
     BookingTimePage,
     HistoryBookingPage,
+    StylistPage,
     ValidatePage,
     TabsPage
 
@@ -83,6 +85,7 @@ import { OasisProvider } from '../providers/oasis/oasis';
     BranchesPage,
     BookingTimePage,
     HistoryBookingPage,
+    StylistPage,
     ValidatePage,
     TabsPage
   ],

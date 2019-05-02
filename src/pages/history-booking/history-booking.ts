@@ -18,8 +18,16 @@ export class HistoryBookingPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  schedules = [];
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HistoryBookingPage');
+    this.schedules = [
+      { 
+        service: 'Nails'
+      },
+      { 
+        service: 'Eyebrown'
+      }
+    ]
   }
 
 }
