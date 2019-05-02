@@ -170,7 +170,7 @@ priceList = 'Nails';
   ionViewDidLoad() {
     this.deals = [
       {
-        image: '../assets/imgs/Hotdeal1.png'
+        image: '../assets/imgs/Hotdeal2.png'
       },
       {
         image: '../assets/imgs/Hotdeal1.png'
