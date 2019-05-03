@@ -16,40 +16,39 @@ import { StylistPage } from '../stylist/stylist';
   templateUrl: 'booking-time.html',
 })
 export class BookingTimePage {
-  timeData: any;
-  times: any;
   time: any;
-  
+  date:any;
+  branch_id:any;
+  category_id:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.timeData = [
-      { time: '8:00 - 8:30', value: '8:00 - 8:30' },
-      { time: '8:30 - 9:00', value: '' },
-      { time: '9:00 - 9:30', value: 'black' },
-      { time: '9:30 - 10:00', value: 'red' }
-  ];
+    //Pick Date
 
-  // Pre-selected object with different object reference      
-  this.times = { time: '8:00 - 8:30', value: '' };
+    // this.date=  new Date().toISOString();
+    // this.time=  new Date().toISOString();
 
-  //Pick Date
-
-  this.time=  new Date().toISOString()
+    this.category_id = navParams.get('category_id');
+    this.branch_id = navParams.get('branch_id');
   }
 
   compareFn(option1: any, option2: any) {
     return option1.value === option2.value;
 }
 
-  
-  /* 
+
+  /*
   BOOKING BUTTON
   */
  goToStylistPage(){
-   this.navCtrl.push(StylistPage);
+   this.navCtrl.push(StylistPage,{
+     branch_id: this.branch_id,
+     category_id: this.category_id,
+     time: this.time,
+     date: this.date
+   });
  }
- 
- 
+
+
 
 
 }

@@ -21,16 +21,20 @@ export class CartPage {
   ) {
   }
 
+  test(id){
+    console.log("Product id:"+id);
+    console.log(this.products[0]);
+  }
+
   ionViewDidLoad() {
     this.products.push(this.cartProvider.addedItems);
-    console.log(this.products[0]);
   }
   goToConfirmPage(){
     this.navCtrl.push(ConfirmPage);
   }
-  delete(product){
-    this.products = this.products.filter(i => i.title != product.title);
-  }
+  // delete(product){
+  //   this.products = this.products.filter(i => i.title != product.title);
+  // }
 
 
 }

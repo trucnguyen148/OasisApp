@@ -12,22 +12,22 @@
 
 <ion-content padding>
   <ion-grid>
-    <ion-card *ngFor="let branch of branches" (click)="goToBookingTimePage()">
+    <ion-card *ngFor="let branch of branches" (click)="goToBookingTimePage(branch.id)">
       <ion-row>
         <ion-col col-5>
-          <img [src]="branch.image"/>
+
         </ion-col>
         <ion-col col-7>
           <ion-card-content>
               <ion-card-title>
-                <b>{{ branch.name }}</b> 
+                <b>{{ branch.name }}</b>
               </ion-card-title>
-              
+
               <p><b>Address:</b> {{ branch.address}}</p>
-              <p><b>Phone number:</b> {{ branch.phonenumber}}</p>
+              <p><b>Phone number:</b> {{ branch.phone}}</p>
           </ion-card-content>
         </ion-col>
-      </ion-row> 
-    </ion-card> 
+      </ion-row>
+    </ion-card>
   </ion-grid>
 </ion-content>

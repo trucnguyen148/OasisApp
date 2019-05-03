@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, Modal } from 'ionic-angular';
 import { BranchesPage } from '../branches/branches';
 import { HistoryBookingPage } from '../history-booking/history-booking';
+import { OasisProvider } from '../../providers/oasis/oasis';
 
 /**
  * Generated class for the CalendarPage page.
@@ -16,21 +17,37 @@ import { HistoryBookingPage } from '../history-booking/history-booking';
   templateUrl: 'calendar.html',
 })
 export class CalendarPage {
+  bookings:any;
+  id = 1;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public modalCtrl: ModalController,
+    private oasisProvider:OasisProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalendarPage');
   }
 
-  goToBranchesPage(){
-    this.navCtrl.push(BranchesPage)
+  goToBranchesPage(id){
+    this.navCtrl.push(BranchesPage, {
+      category_id: id
+    });
   }
 
-  goToHistoryBookingPage(){
-    let myModal = this.modalCtrl.create(HistoryBookingPage);
-    myModal.present();
+  goToHistoryBookingPage(id){
+    this.oasisProvider.getListID("booking/1/customer", id).subscribe(bookings => {
+      this.bookings = JSON.parse(bookings['_body']);
+      //console.log('my bookings: ',  JSON.parse(bookings['_body']))
+      this.navCtrl.push(HistoryBookingPage,{
+        bookings: this.bookings
+      });
+    });
+    // let myModal = this.modalCtrl.create(HistoryBookingPage);
+    // myModal.present();
   }
 
 }

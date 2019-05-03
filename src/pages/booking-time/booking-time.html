@@ -14,30 +14,25 @@
 <!--Choose day (put calendar here)-->
 <ion-item>
     <ion-label>Choose date:</ion-label>
-    <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2019" max="2020" [(ngModel)]="time"></ion-datetime>
+    <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2019" max="2020" [(ngModel)]="date"></ion-datetime>
   </ion-item>
 <!--Choose time-->
   <ion-item>
     <ion-label>Choose time:</ion-label>
-    <ion-select [(ngModel)]="times" multiple="true" okText="Okay" cancelText="Dismiss" [compareWith]="compareFn">
-      <ion-option *ngFor="let o of timeData" [value]="o">{{o.time}}</ion-option>
-    </ion-select>
+    <ion-datetime displayFormat="HH:MM" [(ngModel)]="time"></ion-datetime>
   </ion-item>
 
-      
+
 <!--Still missing name of employee-->
-  
-  
-  
+
+
+
   <div class="wrapper">
       <button class="button" text-center ion-button class="button-center" (click)="goToStylistPage()">CHOOSE STYLIST</button>
   </div>
-  
+
   <!--Booking button-->
-           
 
-  
+
+
 </ion-content>
-
-    
-

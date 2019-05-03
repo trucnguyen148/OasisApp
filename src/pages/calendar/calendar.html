@@ -7,7 +7,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>BOOKING SERVICE</ion-title>
-    <ion-buttons (click)="goToHistoryBookingPage()" right>
+    <ion-buttons (click)="goToHistoryBookingPage(id)" right>
         <button ion-button icon-only>
             <ion-icon name="calendar"></ion-icon>
         </button>
@@ -16,9 +16,9 @@
 </ion-header>
 
 <ion-content padding>
-    <button (click)="goToBranchesPage()" ion-button block> Nails</button>       
- 
-    <button (click)="goToBranchesPage()" ion-button block> Eyebrown Semi PermanentTattoo</button>       
+    <button (click)="goToBranchesPage(5)" ion-button block> Nails</button>
 
-    <button (click)="goToBranchesPage()" ion-button block> Eyelasher Extension</button> 
+    <button (click)="goToBranchesPage(8)" ion-button block> Permanent Make-Up</button>
+
+    <button (click)="goToBranchesPage(9)" ion-button block> Eyelasher Extension</button>
 </ion-content>

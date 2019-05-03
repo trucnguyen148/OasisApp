@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { OasisProvider } from '../../providers/oasis/oasis';
 
 /**
  * Generated class for the HistoryBookingPage page.
@@ -14,21 +15,14 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'history-booking.html',
 })
 export class HistoryBookingPage {
+  bookings =[];
+  emp_name =[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, private oasisProvider:OasisProvider) {
+    this.bookings = navParams.get('bookings');
+    console.log(this.bookings);
   }
 
-  schedules = [];
-  ionViewDidLoad() {
-    this.schedules = [
-      { 
-        service: 'Nails'
-      },
-      { 
-        service: 'Eyebrown'
-      }
-    ]
-  }
   closeModal(){
     this.viewCtrl.dismiss();
   }
