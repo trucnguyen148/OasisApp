@@ -8,11 +8,15 @@
 
 <ion-content padding>
     <img class="logo"  logo src="../assets/imgs/logo.png">
-    <h1>VERIFY PHONE</h1>
-    <p>We texted the code to your phone number. Enter it below to finish your register</p>
-    <input type="number">
+    <h1 text-center>VERIFY PHONE</h1>
+    <p text-center>We texted the code to your phone number. Enter it below to finish your register</p>
+    <div class="wrapper">
+      <input class="button" type="number">
+    </div>
     <br>
-    <button ion-button (click)="goToConfirmPage()">VERIFY</button>
+    <div class="wrapper">
+      <button class="button" ion-button (click)="goToConfirmPage()">VERIFY</button>
+    </div>
     <br>
     <a href="">Didn't receive SMS?</a>
   </ion-content>

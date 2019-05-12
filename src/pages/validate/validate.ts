@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the ValidatePage page.
@@ -21,13 +22,8 @@ export class ValidatePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ValidatePage');
   }
-  async goToConfirmPage() {
-    const alert = await this.alertController.create({
-      
-      message: 'Welcome to family of OASIS',
-      buttons: ['OK']
-    });
-
-    await alert.present();
+  
+  goToConfirmPage() {
+  this.navCtrl.push(TabsPage);
   }
 }
